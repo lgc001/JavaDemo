@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shangpin.demo.core.dao.ProductRepository">
+  <resultMap id="BaseResultMap" type="com.shangpin.demo.model.ProductInfo">
+    <result column="ProductNO" property="productNo" jdbcType="VARCHAR" />
+    <result column="ProductName" property="productName" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    productNo,productName
+  </sql>
+  <select id="getProduct" parameterType="String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from SpProduct(NOLOCK) where ProductNo=#{productNo}
+  </select>
+</mapper>

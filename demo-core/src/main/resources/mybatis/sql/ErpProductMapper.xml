@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shangpin.demo.core.dao.ErpProductRepository">
+  <select id="getProductNoByPid" parameterType="String" resultType="String">
+    SELECT top 1 sku.ProductNo FROM ErpSupplierPidRef ep(NOLOCK)
+    JOIN ShangPinProduct.dbo.SpSku sku(NOLOCK) ON ep.SkuNo = sku.SkuNo
+    WHERE ep.Pid=#{pid}
+  </select>
+</mapper>

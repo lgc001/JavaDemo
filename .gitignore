@@ -1,0 +1,11 @@
+# Created by .ignore support plugin (hsz.mobi)
+/.idea/
+/demo-api/logs/
+/demo-api/target/
+/demo-core/logs/
+/demo-core/target/
+/demo-model/logs/
+/demo-model/target/
+/demo-util/logs/
+/demo-util/target/
+/*.iml/
