@@ -8,4 +8,8 @@
 /demo-model/target/
 /demo-util/logs/
 /demo-util/target/
-/*.iml/
+/javaDemo.iml
+/demo-model/demo-model.iml
+/demo-core/demo-core.iml
+/demo-api/demo-api.iml
+/demo-util/demo-util.iml
