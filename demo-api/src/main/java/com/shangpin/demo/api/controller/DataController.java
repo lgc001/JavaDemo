@@ -18,11 +18,10 @@ public class DataController {
     // 此返回实体不使用别名
     @RequestMapping("/getPrice")
     @ResponseBody
-    public ResponseDto getPrice()
-    {
-        ResponseDto dto=new ResponseDto();
+    public ResponseDto getPrice() {
+        ResponseDto dto = new ResponseDto();
 
-        PriceResponseDto price=new PriceResponseDto();
+        PriceResponseDto price = new PriceResponseDto();
         price.setProductNo("30389483");
         price.setPrice(new BigDecimal("599.00"));
 
