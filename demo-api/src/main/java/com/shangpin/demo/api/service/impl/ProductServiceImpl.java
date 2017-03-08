@@ -1,11 +1,11 @@
-package com.shangpin.demo.core.service.impl;
+package com.shangpin.demo.api.service.impl;
 
-import com.shangpin.demo.core.dao.ErpProductRepository;
-import com.shangpin.demo.core.dao.ProductRepository;
-import com.shangpin.demo.core.service.ProductService;
+import com.shangpin.demo.api.dao.ErpProductRepository;
+import com.shangpin.demo.api.dao.ProductRepository;
+import com.shangpin.demo.api.service.ProductService;
+import com.shangpin.demo.api.util.datasource.DataSourceTypeManager;
+import com.shangpin.demo.api.util.datasource.EnumDataSource;
 import com.shangpin.demo.model.ProductInfo;
-import com.shangpin.demo.utils.datasource.DataSourceTypeManager;
-import com.shangpin.demo.utils.datasource.EnumDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

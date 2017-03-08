@@ -1,4 +1,4 @@
-package com.shangpin.demo.core.service;
+package com.shangpin.demo.api.service;
 
 import java.math.BigDecimal;
 

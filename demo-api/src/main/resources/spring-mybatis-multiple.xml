@@ -65,7 +65,7 @@
         <property name="minEvictableIdleTimeMillis" value="${minEvictableIdleTimeMillis}"/>
     </bean>
 
-    <bean id="multipleDataSource" class="com.shangpin.demo.utils.datasource.ThreadLocalRountingDataSource">
+    <bean id="multipleDataSource" class="com.shangpin.demo.api.util.datasource.DynamicRountingDataSource">
         <property name="defaultTargetDataSource" ref="wfsDataSource"/>
         <property name="targetDataSources">
             <map>
@@ -84,7 +84,7 @@
   
     <!-- DAO接口所在包名，Spring会自动查找其下的类 -->  
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">  
-        <property name="basePackage" value="com.shangpin.demo.core.dao" />
+        <property name="basePackage" value="com.shangpin.demo.api.dao" />
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>  
     </bean>  
   

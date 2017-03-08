@@ -1,7 +1,7 @@
-package com.shangpin.demo.core.service.impl;
+package com.shangpin.demo.api.service.impl;
 
 import com.google.gson.reflect.TypeToken;
-import com.shangpin.demo.core.service.PriceApiService;
+import com.shangpin.demo.api.service.PriceApiService;
 import com.shangpin.demo.model.dto.PriceResponseDto;
 import com.shangpin.demo.model.dto.common.ResponseDto;
 import com.shangpin.demo.utils.ConfigHelper;

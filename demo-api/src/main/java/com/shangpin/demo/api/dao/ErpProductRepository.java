@@ -1,4 +1,4 @@
-package com.shangpin.demo.core.dao;
+package com.shangpin.demo.api.dao;
 
 import org.springframework.stereotype.Repository;
 

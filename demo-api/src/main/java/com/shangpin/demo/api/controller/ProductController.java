@@ -1,7 +1,7 @@
 package com.shangpin.demo.api.controller;
 
-import com.shangpin.demo.core.service.PriceApiService;
-import com.shangpin.demo.core.service.ProductService;
+import com.shangpin.demo.api.service.PriceApiService;
+import com.shangpin.demo.api.service.ProductService;
 import com.shangpin.demo.model.ProductInfo;
 import com.shangpin.demo.api.dto.ProductResponseDto;
 import com.shangpin.demo.api.dto.common.ResponseDto;

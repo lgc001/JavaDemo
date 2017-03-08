@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.shangpin.demo.core.dao.ProductRepository">
+<mapper namespace="com.shangpin.demo.api.dao.ProductRepository">
   <resultMap id="BaseResultMap" type="com.shangpin.demo.model.ProductInfo">
     <result column="ProductNO" property="productNo" jdbcType="VARCHAR" />
     <result column="ProductName" property="productName" jdbcType="VARCHAR" />
