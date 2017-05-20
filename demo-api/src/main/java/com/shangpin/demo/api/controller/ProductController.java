@@ -35,7 +35,7 @@ public class ProductController {
         product.setProductName(productInfo.getProductName());
         product.setPrice(_priceApiService.getPriceByProductNo("30389483"));
 
-        ResponseDto dto=new ResponseDto();
+        ResponseDto<ProductResponseDto> dto=new ResponseDto<ProductResponseDto>();
         dto.setCode("0");
         dto.setContent(product);
 

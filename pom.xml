@@ -11,7 +11,6 @@
     <modules>
         <module>demo-api</module>
         <module>demo-util</module>
-        <module>demo-core</module>
         <module>demo-model</module>
     </modules>
 
@@ -108,12 +107,13 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.38</version>
         </dependency>
-        <!--sqlserver-->
-       <!--<dependency>-->
-            <!--<groupId>com.microsoft.sqlserver</groupId>-->
-            <!--<artifactId>sqljdbc4</artifactId>-->
-            <!--<version>4.0</version>-->
-        <!--</dependency>-->
+        <!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/sqljdbc4 -->
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>sqljdbc4</artifactId>
+            <version>4.0</version>
+        </dependency>
+
         <!-- 导入dbcp的jar包，用来在applicationContext.xml中配置数据库 -->
         <dependency>
             <groupId>commons-dbcp</groupId>
