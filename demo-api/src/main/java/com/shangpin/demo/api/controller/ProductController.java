@@ -1,10 +1,10 @@
 package com.shangpin.demo.api.controller;
 
+import com.shangpin.demo.api.dto.ProductResponseDto;
+import com.shangpin.demo.api.dto.common.ResponseDto;
 import com.shangpin.demo.api.service.PriceApiService;
 import com.shangpin.demo.api.service.ProductService;
 import com.shangpin.demo.model.ProductInfo;
-import com.shangpin.demo.api.dto.ProductResponseDto;
-import com.shangpin.demo.api.dto.common.ResponseDto;
 import com.shangpin.demo.utils.JsonUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -39,9 +39,8 @@ public class ProductController {
         dto.setCode("0");
         dto.setContent(product);
 
-        String result = JsonUtil.toJson(dto);
+        return JsonUtil.toJson(dto);
 
-        return result;
     }
 
     //这种情况不可以使用实体的属性的别名
@@ -55,7 +54,7 @@ public class ProductController {
         product.setProductName(productInfo.getProductName());
         product.setPrice(_priceApiService.getPriceByProductNo("30389483"));
 
-        ResponseDto dto=new ResponseDto();
+        ResponseDto<ProductResponseDto> dto=new ResponseDto<>();
         dto.setCode("0");
         dto.setContent(product);
 
@@ -68,7 +67,7 @@ public class ProductController {
     public ResponseDto getProductNoByPid() {
         String productNo = _productService.getProductNoByPid("PID3003660807");
 
-        ResponseDto dto=new ResponseDto();
+        ResponseDto<String> dto=new ResponseDto<>();
         dto.setCode("0");
         dto.setContent(productNo);
 
