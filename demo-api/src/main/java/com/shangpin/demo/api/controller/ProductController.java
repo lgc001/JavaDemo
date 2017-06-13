@@ -65,7 +65,7 @@ public class ProductController {
     @RequestMapping(value = "/getProductNoByPid")
     @ResponseBody
     public ResponseDto getProductNoByPid() {
-        String productNo = _productService.getProductNoByPid("PID3003660807");
+        String productNo = _productService.getProductNoByPid("PID3003138659");
 
         ResponseDto<String> dto=new ResponseDto<>();
         dto.setCode("0");

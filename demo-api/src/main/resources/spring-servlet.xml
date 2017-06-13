@@ -33,6 +33,10 @@
 
 	<!-- 如果加了下边的静态资源配置则必须加这句，加这句才可以正确拦截jsp页面。支持mvc注解驱动 -->
 	<mvc:annotation-driven/>
+	<!-- 加了之后就可以访问这些静态资源了 -->
+	<mvc:resources mapping="/css/**" location="/css/" />
+	<mvc:resources mapping="/images/**" location="/images/" />
+	<mvc:resources mapping="/js/**" location="/js/" />
 	
 	<!--启动SpringMVC注解与Json消息转换器。避免IE执行AJAX时，返回JSON出现下载文件 -->
 	<bean id="mappingJacksonHttpMessageConverter"
@@ -52,5 +56,22 @@
 				<ref bean="mappingJacksonHttpMessageConverter" /> <!-- JSON转换器 -->
 			</list>
 		</property>
+	</bean>
+	<!-- 内部视图解析器，JSP与JSTL模板 -->
+	<bean
+			class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<!--指定视图渲染类 -->
+		<property name="viewClass"
+				  value="org.springframework.web.servlet.view.JstlView" />
+		<!--自动添加到路径中的前缀 -->
+		<property name="prefix" value="/WEB-INF/views/" />
+		<!--自动添加到路径中的后缀 -->
+		<property name="suffix" value=".jsp" />
+		<!-- 在页面中使用${rc.contextPath}就可获得contextPath -->
+		<property name="requestContextAttribute" value="rc" />
+		<!--设置所有视图的内容类型，如果视图本身设置内容类型视图类可以忽略 -->
+		<property name="contentType" value="text/html;charset=UTF-8" />
+		<!-- 优先级，越小越前 -->
+		<property name="order" value="1" />
 	</bean>
 </beans>
